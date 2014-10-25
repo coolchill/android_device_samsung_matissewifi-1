@@ -16,24 +16,24 @@
 # inherit from common msm8226-common
 -include device/samsung/msm8226-common/BoardConfigCommon.mk
 
-LOCAL_PATH := device/samsung/ms013g
+LOCAL_PATH := device/samsung/matissewifi
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := ms013g,ms013gxx
+TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifixx
 
 # TWRP
 DEVICE_RESOLUTION := 800x1280
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/ms013g
-TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_ms013g_eur_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/matissewifi
+TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
 TARGET_KERNEL_CONFIG := msm8226-sec_defconfig SELINUX_DEFCONFIG=selinux_defconfig
-#TARGET_PREBUILT_KERNEL := device/samsung/ms013g/kernel
-BOARD_MKBOOTIMG_ARGS := --dt device/samsung/ms013g/dtb --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
+#TARGET_PREBUILT_KERNEL := device/samsung/matissewifi/kernel
+BOARD_MKBOOTIMG_ARGS := --dt device/samsung/matissewifi/dtb --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_ms013g.c
+TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_matissewifi.c
 TARGET_UNIFIED_DEVICE := true
 
 # Partitions
@@ -46,4 +46,4 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 5555010560
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 
 # inherit from the proprietary version
--include vendor/samsung/ms013g/BoardConfigVendor.mk
+-include vendor/samsung/matissewifi/BoardConfigVendor.mk
