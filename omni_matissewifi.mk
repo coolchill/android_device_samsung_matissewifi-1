@@ -24,16 +24,16 @@ USE_LOWFPS_BOOTANI := true
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/ms013g/full_ms013g.mk)
+$(call inherit-product, device/samsung/matissewifi/full_matissewifi.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := ms013g
+PRODUCT_RELEASE_NAME := matissewifi
 
 # Discard inherited values and use our own instead.
-PRODUCT_MODEL := SM-G7102
+PRODUCT_MODEL := SM-T530
 PRODUCT_BRAND := samsung
-PRODUCT_NAME := omni_ms013g
-PRODUCT_DEVICE := ms013g
+PRODUCT_NAME := omni_matissewifi
+PRODUCT_DEVICE := matissewifi
 PRODUCT_MANUFACTURER := samsung
 
 # Set build fingerprint / ID / Product Name ect.
