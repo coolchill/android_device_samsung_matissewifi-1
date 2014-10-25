@@ -22,8 +22,8 @@ LOCAL_PATH := device/samsung/matissewifi
 TARGET_OTA_ASSERT_DEVICE := matissewifi,matissewifixx
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/ms013g
-TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_eur_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/matissewifi
+TARGET_KERNEL_VARIANT_CONFIG := msm8226-sec_matissewifi_defconfig
 TARGET_KERNEL_CONFIG := msm8226-sec_defconfig SELINUX_DEFCONFIG=selinux_defconfig
 #TARGET_PREBUILT_KERNEL := device/samsung/ms013g/kernel
 BOARD_MKBOOTIMG_ARGS := --dt device/samsung/matissewifi/dtb --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
