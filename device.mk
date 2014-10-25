@@ -14,21 +14,27 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, device/samsung/matissewifi/matissewifi.mk)
 
-# call the proprietary setup
-$(call inherit-product, vendor/samsung/matissewifi/matissewifi-vendor.mk)
+LOCAL_PATH := device/samsung/matissewifi
 
-# Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom    
-
+    
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # Inherit from msm8226-common
 $(call inherit-product, device/samsung/msm8226-common/msm8226.mk)
+
+# Use the non-open-source parts, if they're present
+$(call inherit-product-if-exists, vendor/samsung/matissewifi/matissewifi-vendor.mk)
+
+
+
+
+
